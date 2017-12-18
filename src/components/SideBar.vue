@@ -11,9 +11,13 @@
 
 <script>
   import routes from '@/router'
+
+  const {hash} = location;
+
   export default {
     data () {
       return {
+        path: hash.slice(1),
         routes: routes.options.routes
       }
     }
@@ -26,11 +30,14 @@
   }
 
   .sidebar {
-    padding: 20px;
+    padding: 20px 0;
     text-align: left;
     li {
-      padding: 10px 0;
+      padding: 10px 20px;
       line-height: 1;
+      &.active{
+        background: #29d9c2;
+      }
       a {
         color: #fff;
         font-weight: bold;
