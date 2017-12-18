@@ -3,13 +3,18 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-// import 'element-ui/lib/theme-chalk/index.css'
-import { Button, Select } from 'element-ui'
+import { Button, Select, Option, Row, Col, Table, TableColumn } from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+
+Vue.config.productionTip = false
 
 Vue.component(Button.name, Button)
 Vue.component(Select.name, Select)
-Vue.config.productionTip = false
-
+Vue.component(Option.name, Option)
+Vue.component(Row.name, Row)
+Vue.component(Col.name, Col)
+Vue.component(Table.name, Table)
+Vue.component(TableColumn.name, TableColumn)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
